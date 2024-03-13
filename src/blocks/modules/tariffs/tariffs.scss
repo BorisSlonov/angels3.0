@@ -1,0 +1,290 @@
+.sectionTariffs {
+    padding: 150px 0;
+
+    @media(max-width:767px) {
+        padding: 75px 0;
+    }
+}
+
+.tariffs__title {
+    max-width: 1050px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.tariffs__logoWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    position: relative;
+    height: 180px;
+}
+
+.tariffs__topBtn {
+    position: relative;
+    z-index: 10;
+    color: #FAFAFA;
+    text-align: center;
+    font-family: var(--font-family);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%;
+    padding: 12px 24px;
+    border-radius: 50px;
+}
+
+.tariffs__h3 {
+    color: #FAFAFA;
+    text-align: center;
+    font-family: var(--third-family);
+    font-size: 38px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 110%;
+    text-transform: uppercase;
+    z-index: 10;
+}
+
+.tariffs__logo {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.tariffs__body {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 48px;
+    gap: 40px;
+}
+
+.tariffs__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-basis: 33.333%;
+    border-radius: 20px;
+    box-shadow: 0px 8px 20px 0px rgba(98, 98, 98, 0.17);
+}
+
+.tariffs__item_1 {
+    background: linear-gradient(180deg, #687967 0%, #435442 100%);
+    box-shadow: 0 8px 20px 0 rgba(204, 204, 204, 0.17);
+    color: #FCFCFC;
+}
+
+.tariffs__item_2 {
+    background-color: #FFFCFA;
+    color: var(--black);
+}
+
+.tariffs__item_2 .tariffs__topBtn {
+    line-height: 1;
+    background: linear-gradient(90deg, #2c4b29 0%, #3f5e3c 100%);
+    border: 1px solid #eee9de;
+
+}
+
+.tariffs__item_3 {
+    background-color: #1E1E1E;
+    color: #FFFCFA;
+}
+
+.tariffs__item_3 .tariffs__topBtn {
+    border: 1px solid #ebe7db;
+    background-color: #1f341d;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 130%;
+    text-align: center;
+    color: #fafafa;
+}
+
+.tariffs__ul {
+    padding: 24px 16px;
+    display: grid;
+    gap: 8px;
+}
+
+.tariffs__li {
+    position: relative;
+    padding-left: 17px;
+    color: #FFFCFA;
+    font-family: var(--font-family);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 130%;
+}
+
+.tariffs__li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 8px;
+    height: 8px;
+    background-color: #FFFCFA;
+    border-radius: 50%;
+}
+
+.tariffs__li_black {
+    color: var(--black);
+}
+
+.tariffs__li_black::before {
+    background-color: var(--black);
+}
+
+.tariffs__li_border {
+    margin-top: 8px;
+    padding-top: 8px;
+    border-top: 1px solid #534C51;
+}
+
+.tariffs__li_border::before {
+    top: 16px;
+}
+
+.tariffs__li_borderWhite svg {
+    width: 14px;
+    height: 17px;
+}
+
+.tariffs__time {
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.tariffs__bottom {
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-bottom: 48px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 60px;
+}
+
+.tariffs__btns {
+    display: flex;
+    flex-direction: column;
+    margin-top: 24px;
+    gap: 12px;
+}
+
+.tariffs__btn {
+    color: #FFFCFA;
+    font-weight: 500;
+    padding: 24px 36px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-family: var(--font-family);
+    text-align: center;
+    text-decoration: none;
+}
+
+.tariffs__btn_pink {
+    background-color: #E73784;
+    border: 1px solid #E73784;
+}
+
+.tariffs__btn_black {
+    background-color: #272727;
+    border: 1px solid #272727;
+}
+
+.tariffs__price {
+    text-transform: uppercase;
+    font-family: var(--third-family);
+    font-size: 34px;
+}
+
+.tariffs__price:not(:first-child) {
+    margin-top: 14px;
+}
+
+.tariffs__price_next {
+    text-decoration: line-through;
+    color: #999;
+}
+
+
+
+.tooltip-container {
+    position: relative;
+    display: inline-block;
+    /* Делаем контейнер инлайновым, чтобы не разрывать текст */
+    cursor: pointer;
+    /* Делаем указатель в виде руки, чтобы показать, что элемент можно навести */
+}
+
+/* Стили для тултипа */
+
+.tooltip {
+    position: absolute;
+    border-radius: 20px;
+    background: #FFFCFA;
+    padding: 20px;
+    color: #202020;
+    font-size: 14px;
+    z-index: 20;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+}
+
+.tooltip__h4 {
+    color: #202020;
+    font-family: var(--font-family);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+    /* 19.2px */
+    margin-bottom: 12px;
+}
+
+.tooltip__h5 {
+    color: #202020;
+    font-family: var(--font-family);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+    /* 16.8px */
+    margin-bottom: 4px;
+}
+
+/* При наведении на элемент, показываем тултип */
+
+.tooltip-container:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+.tariffs__toolIcon {
+    width: 16px;
+    height: 16px;
+    transform: translateY(2px);
+}
+
+@media(max-width:1023px) {
+    .tariffs__body {
+        flex-direction: column;
+    }
+}

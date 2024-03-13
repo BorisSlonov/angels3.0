@@ -1,0 +1,45 @@
+.btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 24px 36px;
+    border-radius: 10px;
+    border: 1px solid #2C2F26;
+    text-decoration: none;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 130%;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #2C2F26;
+    gap: 24px;
+    transition: all .3s;
+
+
+    @media(max-width:767px) {
+        font-size: 13px;
+    }
+
+    &_fff {
+        border: 1px solid #ebe7dd;
+        color: #fff5f0;
+    }
+
+    &_filter {
+        backdrop-filter: blur(8px);
+        background: rgba(44, 47, 38, 0.36);
+    }
+
+    &__arrow {
+        width: 24px;
+        transition: all .3s;
+    }
+
+    &:hover {
+        opacity: .8;
+
+        .btn__arrow {
+            transform: translateX(5px);
+        }
+    }
+}

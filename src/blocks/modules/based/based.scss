@@ -1,0 +1,113 @@
+.sectionBased {
+    padding: 150px 0;
+
+    @media(max-width:767px) {
+        padding: 75px 0;
+    }
+}
+
+.based {
+    &__body {
+        margin-top: 60px;
+        display: flex;
+        flex-direction: column;
+        gap: 80px;
+
+        @media(max-width:767px) {
+            gap: 40px;
+            margin-top: 40px;
+        }
+    }
+
+    &__subtitle {
+        margin-top: 30px;
+        text-align: center;
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 28px;
+        line-height: 153%;
+        text-transform: uppercase;
+        color: #353535;
+
+        @media(max-width:767px) {
+            font-size: 16px;
+            margin-top: 20px;
+        }
+    }
+
+    &__item {
+        display: flex;
+        gap: 40px;
+
+        @media(max-width:767px) {
+            flex-direction: column-reverse;
+            gap: 16px;
+        }
+
+        &:nth-child(2) {
+            @media(max-width:767px) {
+                flex-direction: column;
+            }
+        }
+    }
+
+    &__txt,
+    &__img {
+        width: 100%;
+        max-width: 50%;
+
+        @media(max-width:767px) {
+            max-width: 100%;
+        }
+    }
+
+    &__txt {
+        max-width: 580px;
+    }
+
+    &__h3 {
+        position: relative;
+        padding-top: 44px;
+        font-family: var(--third-family);
+        font-weight: 300;
+        font-size: 50px;
+        text-transform: uppercase;
+        color: #353535;
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            height: 1px;
+            background-color: #a8a292;
+
+            @media(max-width:767px) {
+                width: 200%;
+                left: 50%;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+
+        @media(max-width:767px) {
+            font-size: 30px;
+            padding-top: 0;
+        }
+    }
+
+    &__p {
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 130%;
+        color: #4f5d4e;
+        margin-top: 20px;
+        max-width: 520px;
+
+        @media(max-width:767px) {
+            font-size: 16px;
+        }
+    }
+}

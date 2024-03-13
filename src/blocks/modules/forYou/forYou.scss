@@ -1,0 +1,68 @@
+.sectionForYou {
+    padding: 150px 0;
+    background-image: url('../img/bgForYou.webp');
+    background-size: cover;
+    background-position: 50% 50%;
+
+    @media(max-width:767px) {
+        padding: 75px 0;
+    }
+}
+
+.forYou {
+    &__subtitle {
+        font-family: var(--font3);
+        font-weight: 400;
+        font-size: 135px;
+        color: #fcfcfc;
+        line-height: 1;
+        text-align: center;
+
+        @media(max-width:767px) {
+            font-size: 55px;
+        }
+    }
+
+    &__body {
+        margin-top: 60px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+
+
+        @media(max-width:767px) {
+            display: none;
+        }
+    }
+
+    &__slider {
+        display: none;
+
+        @media(max-width:767px) {
+            display: block;
+        }
+    }
+}
+
+.forYouCard {
+    border-radius: 10px;
+    padding: 40px;
+    backdrop-filter: blur(25px);
+    background: rgba(53, 53, 53, 0.28);
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 130%;
+    text-align: center;
+    color: #fcfcfc;
+    height: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media(max-width:767px) {
+        height: auto;
+        padding: 16px 10px;
+        font-size: 16px;
+    }
+}
