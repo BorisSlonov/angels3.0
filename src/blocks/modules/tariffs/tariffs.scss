@@ -82,7 +82,8 @@
 }
 
 .tariffs__item_2 {
-    background-color: #FFFCFA;
+    background-image: linear-gradient(172deg, #edeae4 0%, #efebe0 49.26%, #e5e0d4 100%);
+    box-shadow: 0 8px 20px 0 rgba(204, 204, 204, 0.17);
     color: var(--black);
 }
 
@@ -90,7 +91,11 @@
     line-height: 1;
     background: linear-gradient(90deg, #2c4b29 0%, #3f5e3c 100%);
     border: 1px solid #eee9de;
+}
 
+.tariffs__item_2 .tariffs__btn_pink {
+    background: #344033;
+    color: #e9e5dc;
 }
 
 .tariffs__item_3 {
@@ -148,6 +153,10 @@
 .tariffs__li_border {
     margin-top: 8px;
     padding-top: 8px;
+    border-top: 1px solid #FCFCFC;
+}
+
+.tariffs__li_border.tariffs__li_black {
     border-top: 1px solid #534C51;
 }
 
@@ -161,8 +170,14 @@
 }
 
 .tariffs__time {
-    padding-left: 16px;
-    padding-right: 16px;
+    padding-top: 28px;
+    border-top: 1px solid #EFEBE0;
+    margin-left: 16px;
+    margin-right: 16px;
+}
+
+.tariffs__time_dark {
+    border-top: 1px solid #534C51;
 }
 
 .tariffs__bottom {
@@ -173,6 +188,10 @@
     flex-direction: column;
     align-items: center;
     margin-top: 60px;
+
+    @media(max-width:767px) {
+        margin-top: 20px;
+    }
 }
 
 .tariffs__btns {
@@ -185,23 +204,39 @@
 .tariffs__btn {
     color: #FFFCFA;
     font-weight: 500;
-    padding: 24px 36px;
-    border-radius: 50px;
+    padding: 24px 12px;
+    border-radius: 10px;
     cursor: pointer;
     transition: all 0.3s;
     font-family: var(--font-family);
     text-align: center;
     text-decoration: none;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 130%;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #e9e5dc;
+
+    @media(max-width:767px) {
+        font-size: 16px;
+    }
+}
+
+.tariffs__btn:hover {
+    opacity: .75;
 }
 
 .tariffs__btn_pink {
-    background-color: #E73784;
-    border: 1px solid #E73784;
+    color: #2c2f26;
+    background-color: #e9e5dc;
+    border: 1px solid #e9e5dc;
 }
 
 .tariffs__btn_black {
-    background-color: #272727;
-    border: 1px solid #272727;
+    background-color: transparent;
+    border: 1px solid #e9e5dc;
 }
 
 .tariffs__price {
@@ -219,6 +254,11 @@
     color: #999;
 }
 
+.tariffs__item_2 .tariffs__btn_black {
+    border: 1px solid #344033;
+    color: #344033;
+}
+
 
 
 .tooltip-container {
@@ -234,7 +274,7 @@
 .tooltip {
     position: absolute;
     border-radius: 20px;
-    background: #FFFCFA;
+    background: #EFEBE0;
     padding: 20px;
     color: #202020;
     font-size: 14px;
@@ -287,4 +327,23 @@
     .tariffs__body {
         flex-direction: column;
     }
+}
+
+.tariffs__li_del {
+    position: relative;
+    text-decoration: line-through;
+}
+
+.tariffs__noCashBack {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 130%;
+    text-align: center;
+    color: #fcfcfc;
+    margin-top: 16px;
+}
+
+.tariffs__item_2 .tariffs__noCashBack {
+    color: #4b594a;
 }

@@ -1,13 +1,14 @@
-modules.define('result', ['i-bem-dom'], function(provide, bemDom) {
+import Swiper from 'swiper/bundle';
 
-provide(bemDom.declBlock(this.name, {
-    onSetMod: {
-        js: {
-            inited: function() {
-                
-            }
-        }
-    }
-}));
 
+const swiperResult = new Swiper('.swiperResult', {
+    autoHeight: true,
+    slidesPerView: 1,
+    // Navigation arrows
+    navigation: {
+        nextEl: '.resultNavWrapper .swiper-button-next',
+        prevEl: '.resultNavWrapper .swiper-button-prev',
+    },
 });
+
+

@@ -1,0 +1,117 @@
+.sectionReviews {
+    background-image: url('../img/bgReviews.webp');
+    background-size: cover;
+    background-position: 50% 50%;
+    padding: 150px 0;
+
+    @media(max-width:767px) {
+        padding: 75px 0;
+        background-image: url('../img/bgReviews_mob.webp');
+    }
+}
+
+.reviews {
+    &__subtitle {
+        font-family: var(--font3);
+        font-weight: 400;
+        font-size: 135px;
+        text-align: center;
+        color: #fcfcfc;
+        line-height: 1;
+
+        @media(max-width:767px) {
+            font-size: 60px;
+        }
+    }
+
+    &__body {
+        margin-top: 60px;
+        position: relative;
+
+        @media(max-width:767px) {
+            font-size: 40px;
+        }
+    }
+
+    .swiper-slide {
+        display: flex;
+        gap: 30px;
+
+
+        @media(max-width:767px) {
+            flex-direction: column;
+            gap: 20px;
+        }
+    }
+
+}
+
+.reviewsCard {
+    width: 100%;
+    backdrop-filter: blur(33px);
+    background: #323e31;
+    border-radius: 20px;
+    padding: 30px 40px;
+
+    @media(max-width:767px) {
+        padding: 30px 20px;
+    }
+
+    &__header {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+    }
+
+    &__ava {
+        width: 50px;
+        height: 50px;
+
+        @media(max-width:767px) {
+            width: 40px;
+            height: 40px;
+        }
+    }
+
+    &__name {
+        font-family: var(--third-family);
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 120%;
+        text-transform: uppercase;
+        color: #fcfcfc;
+
+        @media(max-width:767px) {
+            font-size: 28px;
+        }
+    }
+
+    &__p {
+        margin-top: 20px;
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 120%;
+        color: #fcfcfc;
+
+        @media(max-width:767px) {
+            font-size: 16px;
+        }
+    }
+}
+
+.reviewsPhoto {
+    width: 100%;
+    max-width: 50%;
+
+    &_noPhoto {
+        display: none;
+    }
+}
+
+.swiperReviews {
+    max-width: 90%;
+}
+
+
+.reviewsNavWrapper {}

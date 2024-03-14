@@ -99,5 +99,53 @@ h4 {
 }
 
 .main-wrapper {
+    max-width: 1920px;
+    margin: 0 auto;
     overflow: hidden;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #ECE8DE !important;
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+    font-size: 20px;
+}
+
+.swiper-button-next,
+.swiper-rtl .swiper-button-prev {
+    right: var(--swiper-navigation-sides-offset, -10px);
+    left: auto;
+}
+
+.swiper-button-prev,
+.swiper-rtl .swiper-button-next {
+    left: var(--swiper-navigation-sides-offset, -10px);
+    right: auto;
+}
+
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+    color: #FCFCFC;
+
+}
+
+.swiper-button-next.swiper-button-disabled,
+.swiper-button-prev.swiper-button-disabled {
+    color: #FCFCFC;
+}
+
+.result__body {
+
+    .swiper-button-next:after,
+    .swiper-button-prev:after {
+        color: #4F5D4E;
+    }
+
+    .swiper-button-next.swiper-button-disabled,
+    .swiper-button-prev.swiper-button-disabled {
+        color: #4F5D4E;
+    }
 }

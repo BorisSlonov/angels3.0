@@ -5,7 +5,8 @@
     background-position: 50% 50%;
 
     @media(max-width:767px) {
-        padding: 75px 0;
+        padding: 75px 0 150px;
+        background-image: url('../img/bgForYou_mob.webp');
     }
 }
 
@@ -36,15 +37,27 @@
     }
 
     &__slider {
+        position: relative;
         display: none;
+
+        .forYouCard:not(:first-child) {
+            margin-top: 16px;
+        }
+
+        .swiper-pagination {
+            position: relative !important;
+            margin-top: 40px;
+        }
 
         @media(max-width:767px) {
             display: block;
+            margin-top: 40px;
         }
     }
 }
 
 .forYouCard {
+    position: relative;
     border-radius: 10px;
     padding: 40px;
     backdrop-filter: blur(25px);
@@ -59,6 +72,19 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-image: url('../img/forYouCard.webp');
+        background-size: cover;
+        opacity: .2;
+        border-radius: 10px;
+    }
 
     @media(max-width:767px) {
         height: auto;

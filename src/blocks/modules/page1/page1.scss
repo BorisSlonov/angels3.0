@@ -1,6 +1,6 @@
 .sectionPage1 {
     padding-top: 70px;
-    padding-bottom: 140px;
+    padding-bottom: 100px;
     background-image: url('../img/bg1.webp');
     background-size: cover;
     background-position: 50% 50%;
@@ -158,10 +158,13 @@
     }
 
     &__txt {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         font-family: var(--font-family);
         font-weight: 400;
         font-size: 18px;
-        line-height: 130%;
+        line-height: 1;
         text-transform: uppercase;
         color: #efebe0;
 
@@ -169,6 +172,7 @@
             font-size: 15px;
             font-family: var(--second-family);
             font-weight: 300;
+            margin-top: 2px;
         }
     }
 }

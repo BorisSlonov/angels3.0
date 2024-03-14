@@ -1,6 +1,4 @@
-import Swiper, { Pagination, Breakpoints } from 'swiper';
-Swiper.use([Pagination, Breakpoints]);
-
+import Swiper from 'swiper/bundle';
 
 if (document.querySelector('.swiperForYou')) {
     const breakpoint = window.matchMedia('(max-width: 767px)');
@@ -14,7 +12,7 @@ if (document.querySelector('.swiperForYou')) {
                     autoHeight: true,
                     slidesPerView: 1,
                     pagination: {
-                        el: '.swiper-pagination',
+                        el: '.forYou__slider .swiper-pagination',
                         clickable: true,
                     },
                     breakpoints: {

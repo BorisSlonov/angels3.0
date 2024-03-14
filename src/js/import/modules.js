@@ -1,3 +1,4 @@
 import "%modules%/accordion/accordion";
-import "%modules%/tabs/tabs";
 import "%modules%/forYou/forYou";
+import "%modules%/result/result";
+import "%modules%/reviews/reviews";

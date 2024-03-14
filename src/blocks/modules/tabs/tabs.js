@@ -1,5 +1,4 @@
-import Swiper, { Pagination, Breakpoints, Autoplay } from "swiper";
-Swiper.use([Pagination, Breakpoints, Autoplay]);
+import Swiper from 'swiper/bundle';
 
 const tabs = (headerSelector, tabSelector, contentSelector, activeClass) => {
   const header = document.querySelector(headerSelector),

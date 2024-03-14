@@ -1,6 +1,18 @@
 .sectionMyMission {
+    position: relative;
     padding: 150px 0;
-    background-color: #EFEBE0;
+    background-color: #EFEADF;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-image: url('../img/bg2.webp');
+        background-size: cover;
+    }
 
     @media(max-width:767px) {
         padding: 75px 0;
@@ -8,6 +20,8 @@
 }
 
 .myMission {
+    position: relative;
+    z-index: 2;
     &__body {
         display: flex;
         flex-direction: column;
