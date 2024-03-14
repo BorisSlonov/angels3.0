@@ -104,6 +104,10 @@
     width: 100%;
     max-width: 50%;
 
+    @media(max-width:767px) {
+        max-width: 100%;
+    }
+
     &_noPhoto {
         display: none;
     }
