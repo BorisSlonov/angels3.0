@@ -156,6 +156,9 @@
     &__header {
         display: flex;
         align-items: center;
+        @media(max-width:767px) {
+            flex-direction: column;
+        }
     }
 
     &__forWho {
