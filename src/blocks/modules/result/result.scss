@@ -55,6 +55,7 @@
     background: #323e31;
     border-radius: 10px;
     padding: 40px 24px;
+    overflow: hidden;
 
     @media(max-width:767px) {
         flex-direction: column;
@@ -133,7 +134,7 @@
     &__h4 {
         margin-top: 24px;
         font-family: var(--font-family);
-        font-weight: 600;
+        font-weight: 500;
         font-size: 22px;
         line-height: 130%;
         color: #fcfcfc;
@@ -208,7 +209,7 @@
         padding-top: 10px;
         padding-left: 10px;
         padding-right: 10px;
-        padding-bottom: 20px;
+        padding-bottom: 10px;
         @media(max-width:767px) {
             padding-left: 4px;
             padding-right: 4px;

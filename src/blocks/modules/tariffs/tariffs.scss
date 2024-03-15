@@ -22,7 +22,12 @@
 
     @media(max-width:767px) {
         display: block;
+        margin: 0 auto;
         max-width: 500px;
+    }
+
+    @media(max-width:500px) {
+        max-width: 260px;
     }
 }
 
@@ -256,6 +261,7 @@
     text-transform: uppercase;
     font-family: var(--third-family);
     font-size: 40px;
+    line-height: 1;
 }
 
 .tariffs__price:not(:first-child) {
