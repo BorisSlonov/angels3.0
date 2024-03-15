@@ -25,6 +25,37 @@
     <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png">
     <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
     <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
+    <style>
+        .overflow {
+            overflow: hidden;
+
+        }
+
+        .main-wrapper {
+            position: relative;
+            max-height: 100vh;
+        }
+
+        .loader {
+            position: absolute;
+            z-index: 10;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            height: 100vh;
+            background-color: #2B2714;
+            background-image: url('../img/loader.webp');
+            background-size: cover;
+            transition: all 2s;
+        }
+
+        @media(max-width:767px) {
+            .loader {
+                background-image: url('../img/loader_mob.webp');
+            }
+        }
+    </style>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -34,8 +65,10 @@
     <link rel="stylesheet" href="styles/main.css">
 </head>
 
-<body>
+<body class="overflow">
     <div class="main-wrapper">
+        <div class="loader"></div>
+
         
         <main class="main">
             <section class="sectionPage1">
@@ -47,7 +80,7 @@
                         Старт:
                     </span>
                     <span class="shortInfo__txt">
-                        25 марта
+                        25 марта
                     </span>
                 </div>
                 <div class="shortInfo__item">
@@ -88,6 +121,14 @@
         </div>
     </div>
 </section>
+            <script>
+                setTimeout(() => {
+                    document.querySelector('.loader').style.opacity = '0';
+                    document.querySelector('.loader').style.transform = 'scale(5)';
+                    document.querySelector('.main-wrapper').style.maxHeight = 'none';
+                    document.querySelector('.overflow').style.overflow = 'auto';
+                }, 3000);
+            </script>
             <section class="sectionMyMission">
     <div class="myMission">
         <div class="container">
@@ -122,7 +163,7 @@
             <div class="based__header">
                 <img src="img/titles/based.svg" alt="" class="based__title  wow  animate__animated animate__fadeInUp">
                 <img src="img/titles/based_mob.svg" alt="" class="based__titleMob  wow  animate__animated animate__fadeInUp">
-                <p class="based__subtitle">
+                <p class="based__subtitle  wow  animate__animated animate__fadeInUp">
                     на трёх фундаментальных компонентах
                 </p>
             </div>
@@ -182,17 +223,23 @@
             <div class="forYou__body">
                 <div class="forYou__item">
                     <div class="forYouCard  wow  animate__animated animate__fadeInUp">
-                        От отеков лица и тела ,которые никак не уходят и остаются лишними килограммами
+                        <span>
+                            От отеков лица и тела ,которые никак не уходят и остаются лишними килограммами
+                        </span>
                     </div>
                 </div>
                 <div class="forYou__item">
                     <div class="forYouCard  wow  animate__animated animate__fadeInUp">
-                        Избегать отношений и собственной реализации из-за неуверенности и комплексов о своем теле
+                        <span>
+                            Избегать отношений и собственной реализации из-за неуверенности и комплексов о своем теле
+                        </span>
                     </div>
                 </div>
                 <div class="forYou__item">
                     <div class="forYouCard  wow  animate__animated animate__fadeInUp tooltip-container">
-                        Который год бороться с целлюлитом и другими проблемными зонами и не видеть результата
+                        <span>
+                            Который год бороться с целлюлитом и другими проблемными зонами и не видеть результата
+                        </span>
                         <div class="tooltip" style="max-width: 495px;">
                             <p class="" style="text-align: center;">
                                 Ушки на бедрах, валики подмышками и над коленками
@@ -215,56 +262,77 @@
                 </div>
                 <div class="forYou__item">
                     <div class="forYouCard  wow  animate__animated animate__fadeInUp">
-                        Постоянно срываться, переедать, набирать вес и чувствовать за это вину
+                        <span>
+                            Постоянно срываться, переедать, набирать вес и чувствовать за это вину
+                        </span>
                     </div>
                 </div>
                 <div class="forYou__item">
                     <div class="forYouCard  wow  animate__animated animate__fadeInUp">
-                        Жить на строгом питании и изнурительных тренировках из страха набрать вес
+                        <span>
+                            Жить на строгом питании и изнурительных тренировках из страха набрать вес
+                        </span>
                     </div>
                 </div>
                 <div class="forYou__item">
                     <div class="forYouCard  wow  animate__animated animate__fadeInUp">
-                        От выпирающего, вздутого живота и чувства тяжести
+                        <span>
+                            От выпирающего, вздутого живота и чувства тяжести
+                        </span>
                     </div>
                 </div>
                 <div class="forYou__item">
                     <div class="forYouCard  wow  animate__animated animate__fadeInUp">
-                        Страдать от болей в теле, шее, спине и пояснице
+                        <span>
+                            Страдать от болей в теле, шее, спине и пояснице
+                        </span>
                     </div>
                 </div>
                 <div class="forYou__item">
                     <div class="forYouCard  wow  animate__animated animate__fadeInUp">
-                        Сдаваться из-за того, что не хватает четкой системы, дисциплины, поддержки и сил для изменений
+                        <span>
+                            От малоподвижного образа жизни с низким уровнем энергии, и нежеланием что-либо делать
+                        </span>
                     </div>
                 </div>
                 <div class="forYou__item">
                     <div class="forYouCard  wow  animate__animated animate__fadeInUp">
-                        От малоподвижного образа жизни с низким уровнем энергии, и нежеланием что-либо делать
+                        <span>
+                            От малоподвижного образа жизни с низким уровнем энергии, и нежеланием что-либо делать
+                        </span>
                     </div>
                 </div>
                 <div class="forYou__item">
                     <div class="forYouCard  wow  animate__animated animate__fadeInUp">
-                        От невозможности носить одежду, которую ты хочешь
+                        <span>
+                            От невозможности носить одежду, которую ты хочешь
+                        </span>
                     </div>
                 </div>
             </div>
 
-            <div class="forYou__slider">
+            <div class="forYou__slider wow animate__animated animate__bounceInRight">
                 <div class="swiper swiper_pagination swiperForYou">
                     <!-- Additional required wrapper -->
                     <div class="swiper-wrapper">
                         <!-- Slides -->
                         <div class="swiper-slide">
                             <div class="forYouCard  wow  animate__animated animate__fadeInUp">
-                                От отеков лица и тела ,которые никак не уходят и остаются лишними килограммами
+                                <span>
+                                    От отеков лица и тела ,которые никак не уходят и остаются лишними килограммами
+                                </span>
                             </div>
                             <div class="forYouCard  wow  animate__animated animate__fadeInUp">
-                                Избегать отношений и собственной реализации из-за неуверенности и комплексов о своем
-                                теле
+                                <span>
+                                    Избегать отношений и собственной реализации из-за неуверенности и комплексов о своем
+                                    теле
+                                </span>
                             </div>
                             <div class="forYouCard  wow  animate__animated animate__fadeInUp tooltip-container">
-                                Который год бороться с целлюлитом и другими проблемными зонами и не видеть результата
+                                <span>
+                                    Который год бороться с целлюлитом и другими проблемными зонами и не видеть
+                                    результата
+                                </span>
                                 <div class="tooltip" style="max-width: 495px;">
                                     <p class="" style="text-align: center;">
                                         Ушки на бедрах, валики подмышками и над коленками
@@ -287,28 +355,43 @@
                         </div>
                         <div class="swiper-slide">
                             <div class="forYouCard  wow  animate__animated animate__fadeInUp">
-                                Постоянно срываться, переедать, набирать вес и чувствовать за это вину
+                                <span>
+                                    Постоянно срываться, переедать, набирать вес и чувствовать за это вину
+                                </span>
                             </div>
                             <div class="forYouCard  wow  animate__animated animate__fadeInUp">
-                                Жить на строгом питании и изнурительных тренировках из страха набрать вес3
+                                <span>
+                                    Жить на строгом питании и изнурительных тренировках из страха набрать вес
+                                </span>
                             </div>
                             <div class="forYouCard  wow  animate__animated animate__fadeInUp">
-                                От выпирающего, вздутого живота и чувства тяжести
+                                <span>
+                                    От выпирающего, вздутого живота и чувства тяжести
+                                </span>
                             </div>
                         </div>
                         <div class="swiper-slide">
                             <div class="forYouCard  wow  animate__animated animate__fadeInUp">
-                                Страдать от болей в теле, шее, спине и пояснице
+                                <span>
+                                    Страдать от болей в теле, шее, спине и пояснице
+                                </span>
                             </div>
                             <div class="forYouCard  wow  animate__animated animate__fadeInUp">
-                                Сдаваться из-за того, что не хватает четкой системы, дисциплины, поддержки и сил для
-                                изменений
+                                <span>
+                                    Сдаваться из-за того, что не хватает четкой системы, дисциплины, поддержки и сил для
+                                    изменений
+                                </span>
                             </div>
                             <div class="forYouCard  wow  animate__animated animate__fadeInUp">
-                                От малоподвижного образа жизни с низким уровнем энергии, и нежеланием что-либо делать
+                                <span>
+                                    От малоподвижного образа жизни с низким уровнем энергии, и нежеланием что-либо
+                                    делать
+                                </span>
                             </div>
                             <div class="forYouCard  wow  animate__animated animate__fadeInUp">
-                                От невозможности носить одежду, которую ты хочешь
+                                <span>
+                                    От невозможности носить одежду, которую ты хочешь
+                                </span>
                             </div>
                         </div>
                     </div>
@@ -2390,7 +2473,7 @@
             </a>
             <a href="https://anastasiaminkovska.kwiga.com/o/IMcxjNaRd4Oo-46" target="_blank"
                 class="tariffs__btn tariffs__btn_black">
-                Внести предоплату: 25$
+                Внести предоплату: 50$
             </a>
         </div>
         <p class="tariffs__noCashBack">
@@ -3122,7 +3205,7 @@
                             <p class="accordion__p">
                                 Нет, так как внося предоплату вы бронируете за собой место на курсе и сохраняете
                                 первоначальную стоимость. 
-                                Вы сможете внести оставшуюся часть оплаты до 25 марта включительно. 
+                                Вы сможете внести оставшуюся часть оплаты до 24 марта включительно. 
                             </p>
                         </div>
                     </div>

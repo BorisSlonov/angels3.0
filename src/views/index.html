@@ -25,6 +25,37 @@
     <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png">
     <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
     <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
+    <style>
+        .overflow {
+            overflow: hidden;
+
+        }
+
+        .main-wrapper {
+            position: relative;
+            max-height: 100vh;
+        }
+
+        .loader {
+            position: absolute;
+            z-index: 10;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            height: 100vh;
+            background-color: #2B2714;
+            background-image: url('../img/loader.webp');
+            background-size: cover;
+            transition: all 2s;
+        }
+
+        @media(max-width:767px) {
+            .loader {
+                background-image: url('../img/loader_mob.webp');
+            }
+        }
+    </style>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -34,11 +65,21 @@
     <link rel="stylesheet" href="styles/main.css">
 </head>
 
-<body>
+<body class="overflow">
     <div class="main-wrapper">
+        <div class="loader"></div>
+
         @@include("../blocks/modules/header/header.html")
         <main class="main">
             @@include("../blocks/modules/page1/page1.html")
+            <script>
+                setTimeout(() => {
+                    document.querySelector('.loader').style.opacity = '0';
+                    document.querySelector('.loader').style.transform = 'scale(5)';
+                    document.querySelector('.main-wrapper').style.maxHeight = 'none';
+                    document.querySelector('.overflow').style.overflow = 'auto';
+                }, 3000);
+            </script>
             @@include("../blocks/modules/myMission/myMission.html")
             @@include("../blocks/modules/based/based.html")
             @@include("../blocks/modules/forYou/forYou.html")

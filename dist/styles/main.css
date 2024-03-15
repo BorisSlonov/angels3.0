@@ -940,11 +940,13 @@ h4 {
 }
 
 .swiper-pagination-bullet {
-  background-color: rgba(236, 232, 222, 0.5764705882) !important;
+  background-color: #ece8de !important;
+  opacity: 0.75 !important;
 }
 
 .swiper-pagination-bullet-active {
   background-color: #ECE8DE !important;
+  opacity: 1 !important;
 }
 
 .swiper-button-next:after,
@@ -1803,8 +1805,12 @@ h4 {
   left: 0;
   background-image: url("../img/forYouCard.webp");
   background-size: cover;
-  opacity: 0.2;
   border-radius: 10px;
+}
+
+.forYouCard span {
+  position: relative;
+  z-index: 2;
 }
 
 .sectionPlan {

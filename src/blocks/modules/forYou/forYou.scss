@@ -82,8 +82,12 @@
         left: 0;
         background-image: url('../img/forYouCard.webp');
         background-size: cover;
-        opacity: .2;
         border-radius: 10px;
+    }
+
+    span {
+        position: relative;
+        z-index: 2;
     }
 
     @media(max-width:767px) {
