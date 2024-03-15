@@ -78,13 +78,7 @@ h4 {
     color: #fcfcfc;
 
     @media(max-width:767px) {
-        font-family: var(--third-family);
-        font-weight: 300;
         font-size: 48px;
-        line-height: 110%;
-        text-transform: uppercase;
-        text-align: center;
-        color: #fcfcfc;
     }
 }
 

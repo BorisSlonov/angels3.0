@@ -28,6 +28,7 @@
 
     .accordion__item:has(.acc-active) {
         background: #D5D1C7;
+        margin-bottom: 20px;
     }
 
     .accordion__item_12:has(.acc-active) {
@@ -153,6 +154,13 @@
 
 
     .accordion__item {
+        .accordion__h4.acc-active::after {
+            @media(max-width:767px) {
+                width: 100%;
+                max-width: 60%;
+            }
+        }
+
         &:nth-child(1) {
             .accordion__h4.acc-active::after {
                 opacity: 1;
@@ -312,8 +320,8 @@
         line-height: 1;
         text-transform: lowercase;
         text-align: center;
-        color: #fffdf9;
-        border: 1px solid #FFFDF9;
+        color: #FFFDF9;
+        border: 1px solid #fffdf994;
         letter-spacing: -0.05em;
         padding: 8px 16px;
         border-radius: 10px;

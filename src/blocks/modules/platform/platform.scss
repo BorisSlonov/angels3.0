@@ -1,0 +1,110 @@
+.sectionPlatform {
+    background-color: #EFEBE0;
+    padding: 150px 0;
+
+    @media(max-width:767px) {
+        padding: 75px 0;
+    }
+}
+
+.swiperPlatform {
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.platform {
+    &__body {
+        position: relative;
+        margin-top: 60px;
+
+        @media(max-width:767px) {
+            margin-top: 40px;
+        }
+
+        .swiper-button-next:after,
+        .swiper-button-prev:after {
+            color: #4F5D4E;
+        }
+
+    }
+
+    &__h2 {
+        color: #353535;
+    }
+}
+
+.platformCard {
+    display: flex;
+    gap: 20px;
+    color: #FFF5FF;
+
+    @media(max-width:1023px) {
+        flex-direction: column;
+    }
+
+    &__item {
+        width: 100%;
+        max-width: 50%;
+
+        @media(max-width:1023px) {
+            max-width: 100%;
+        }
+
+        &_txt {
+            padding: 40px 20px;
+            border-radius: 10px;
+            background-image: url('../img/platform/cardBg.webp');
+            background-size: cover;
+        }
+    }
+
+    &__h3 {
+        font-family: var(--third-family);
+        font-weight: 300;
+        font-size: 42px;
+        letter-spacing: -0.05em;
+        text-transform: uppercase;
+        text-align: center;
+        color: #fff5ff;
+    }
+
+    &__p {
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 130%;
+        color: #fff5ff;
+        margin-top: 20px;
+    }
+
+    &__ul {
+        margin-top: 24px;
+    }
+
+    &__li {
+        position: relative;
+        padding-left: 20px;
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 10px;
+            width: 6px;
+            height: 6px;
+            background-color: #fff5ff;
+            border-radius: 50%;
+        }
+
+        &:not(:first-child) {
+            margin-top: 10px;
+        }
+    }
+
+    &__img {
+        border-radius: 10px;
+        object-fit: cover;
+        object-position: 50% 50%;
+    }
+}

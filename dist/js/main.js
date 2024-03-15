@@ -15,9 +15,9 @@ document.addEventListener("DOMContentLoaded", function () {
       console.log("click");
       btn.addEventListener("click", function () {
         if (!this.classList.contains("acc-active")) {
-          _btns.forEach(function (btn) {
-            btn.classList.remove("acc-active");
-          });
+          // btns.forEach((btn) => {
+          //   btn.classList.remove("acc-active");
+          // });
           this.classList.add("acc-active");
         } else {
           this.classList.remove("acc-active");
@@ -71,6 +71,28 @@ if (document.querySelector('.swiperForYou')) {
   breakpointChecker();
   breakpoint.addEventListener('change', breakpointChecker);
 }
+
+/***/ }),
+
+/***/ "./src/blocks/modules/platform/platform.js":
+/*!*************************************************!*\
+  !*** ./src/blocks/modules/platform/platform.js ***!
+  \*************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var swiper_bundle__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper/bundle */ "./node_modules/swiper/swiper-bundle.mjs");
+
+var swiperPlatform = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"]('.swiperPlatform', {
+  autoHeight: true,
+  slidesPerView: 1,
+  // Navigation arrows
+  navigation: {
+    nextEl: '.platformNavWrapper .swiper-button-next',
+    prevEl: '.platformNavWrapper .swiper-button-prev'
+  }
+});
 
 /***/ }),
 
@@ -138,7 +160,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_accordion_accordion__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_modules_accordion_accordion__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _modules_forYou_forYou__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! %modules%/forYou/forYou */ "./src/blocks/modules/forYou/forYou.js");
 /* harmony import */ var _modules_result_result__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! %modules%/result/result */ "./src/blocks/modules/result/result.js");
-/* harmony import */ var _modules_reviews_reviews__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! %modules%/reviews/reviews */ "./src/blocks/modules/reviews/reviews.js");
+/* harmony import */ var _modules_platform_platform__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! %modules%/platform/platform */ "./src/blocks/modules/platform/platform.js");
+/* harmony import */ var _modules_reviews_reviews__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! %modules%/reviews/reviews */ "./src/blocks/modules/reviews/reviews.js");
+
 
 
 

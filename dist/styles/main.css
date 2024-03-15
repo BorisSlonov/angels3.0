@@ -811,6 +811,12 @@ button.swiper-pagination-bullet {
 
 @font-face {
   font-family: "Gilroy";
+  src: url("../fonts/Gilroy/Gilroy-Ultralight.woff") format("woff"), url("../fonts/Gilroy/Gilroy-Ultralight.woff2") format("woff2");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Gilroy";
   src: url("../fonts/Gilroy/Gilroy-Regular.woff") format("woff"), url("../fonts/Gilroy/Gilroy-Regular.woff2") format("woff2");
   font-weight: 400;
 }
@@ -1092,6 +1098,7 @@ h4 {
 
 .plan__body .accordion__item:has(.acc-active) {
   background: #D5D1C7;
+  margin-bottom: 20px;
 }
 
 .plan__body .accordion__item_12:has(.acc-active) {
@@ -1295,8 +1302,8 @@ h4 {
   line-height: 1;
   text-transform: lowercase;
   text-align: center;
-  color: #fffdf9;
-  border: 1px solid #FFFDF9;
+  color: #FFFDF9;
+  border: 1px solid rgba(255, 253, 249, 0.5803921569);
   letter-spacing: -0.05em;
   padding: 8px 16px;
   border-radius: 10px;
@@ -1662,6 +1669,14 @@ h4 {
   gap: 80px;
 }
 
+.based__title {
+  max-width: 1150px;
+}
+
+.based__titleMob {
+  display: none;
+}
+
 .based__subtitle {
   margin-top: 30px;
   text-align: center;
@@ -1789,6 +1804,7 @@ h4 {
 .sectionPlan {
   padding: 150px 0;
   background-image: url("../img/bgPlan.webp");
+  background-size: cover;
 }
 
 .plan__title {
@@ -1902,6 +1918,7 @@ h4 {
 .planContentCard__header {
   display: flex;
   align-items: center;
+  margin-bottom: 5px;
 }
 
 .planContentCard__forWho {
@@ -1914,7 +1931,6 @@ h4 {
 }
 
 .planContentCard__h6 {
-  margin-top: 20px;
   font-weight: 500;
   font-size: 18px;
   line-height: 130%;
@@ -1949,12 +1965,16 @@ h4 {
 }
 
 .planContentCard_dark .planItem__li_video::before {
-  background-image: url("../img/iconFile_fff.svg");
+  background-image: url("../img/iconVideo_fff.svg");
 }
 
 .accordion__item_12 .accordion__num {
   background: linear-gradient(126deg, #edeae4 0%, #efebe0 49.26%, #c0bcb3 100%);
   color: #353535;
+}
+
+.planContentCard__ul:not(:last-child) {
+  margin-bottom: 20px;
 }
 
 .sectionResult {
@@ -2001,6 +2021,10 @@ h4 {
   padding: 40px 24px;
 }
 
+.resultCard__span {
+  white-space: nowrap;
+}
+
 .resultCard__item:first-child {
   width: 100%;
   max-width: 45%;
@@ -2044,6 +2068,10 @@ h4 {
   font-size: 22px;
   line-height: 130%;
   color: #fcfcfc;
+}
+
+.resultCard__txt {
+  max-width: 354px;
 }
 
 .resultCard__ul {
@@ -2101,12 +2129,12 @@ h4 {
 .resultCard__review {
   position: relative;
   margin-top: 24px;
-  padding: 16px 40px;
+  padding: 16px 24px;
   border-radius: 10px;
   border-radius: 10px;
   font-family: var(--font-family);
   font-weight: 400;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 130%;
   text-align: center;
   color: #fcfcfc;
@@ -2145,6 +2173,10 @@ h4 {
   margin-left: auto;
   margin-right: auto;
   display: block;
+}
+
+.tariffs__titleMob {
+  display: none;
 }
 
 .tariffs__logoWrapper {
@@ -2285,8 +2317,8 @@ h4 {
 }
 
 .tariffs__li_border {
-  margin-top: 8px;
-  padding-top: 8px;
+  margin-top: 10px;
+  padding-top: 20px;
   border-top: 1px solid #FCFCFC;
 }
 
@@ -2295,7 +2327,7 @@ h4 {
 }
 
 .tariffs__li_border::before {
-  top: 16px;
+  top: 27px;
 }
 
 .tariffs__li_borderWhite svg {
@@ -2304,7 +2336,7 @@ h4 {
 }
 
 .tariffs__time {
-  padding-top: 28px;
+  padding-top: 20px;
   border-top: 1px solid #EFEBE0;
   margin-left: 16px;
   margin-right: 16px;
@@ -2368,7 +2400,7 @@ h4 {
 .tariffs__price {
   text-transform: uppercase;
   font-family: var(--third-family);
-  font-size: 34px;
+  font-size: 40px;
 }
 
 .tariffs__price:not(:first-child) {
@@ -2376,6 +2408,7 @@ h4 {
 }
 
 .tariffs__price_next {
+  font-size: 44px;
   text-decoration: line-through;
   color: #999;
 }
@@ -2464,6 +2497,132 @@ h4 {
 
 .tariffs__item_2 .tariffs__noCashBack {
   color: #4b594a;
+}
+
+.sectionProblems {
+  padding: 130px 0;
+  background-image: url("../img/bgProblems.webp");
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.problems__body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.problems__subtitle {
+  text-align: center;
+  font-family: var(--font3);
+  font-weight: 400;
+  font-size: 135px;
+  color: #fcfcfc;
+  line-height: 1;
+}
+
+.problems__p {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 130%;
+  text-align: center;
+  color: rgba(255, 245, 255, 0.81);
+  max-width: 652px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.sectionPlatform {
+  background-color: #EFEBE0;
+  padding: 150px 0;
+}
+
+.swiperPlatform {
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.platform__body {
+  position: relative;
+  margin-top: 60px;
+}
+
+.platform__body .swiper-button-next:after,
+.platform__body .swiper-button-prev:after {
+  color: #4F5D4E;
+}
+
+.platform__h2 {
+  color: #353535;
+}
+
+.platformCard {
+  display: flex;
+  gap: 20px;
+  color: #FFF5FF;
+}
+
+.platformCard__item {
+  width: 100%;
+  max-width: 50%;
+}
+
+.platformCard__item_txt {
+  padding: 40px 20px;
+  border-radius: 10px;
+  background-image: url("../img/platform/cardBg.webp");
+  background-size: cover;
+}
+
+.platformCard__h3 {
+  font-family: var(--third-family);
+  font-weight: 300;
+  font-size: 42px;
+  letter-spacing: -0.05em;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff5ff;
+}
+
+.platformCard__p {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 130%;
+  color: #fff5ff;
+  margin-top: 20px;
+}
+
+.platformCard__ul {
+  margin-top: 24px;
+}
+
+.platformCard__li {
+  position: relative;
+  padding-left: 20px;
+}
+
+.platformCard__li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 6px;
+  height: 6px;
+  background-color: #fff5ff;
+  border-radius: 50%;
+}
+
+.platformCard__li:not(:first-child) {
+  margin-top: 10px;
+}
+
+.platformCard__img {
+  border-radius: 10px;
+  object-fit: cover;
+  object-position: 50% 50%;
 }
 
 .sectionReviews {
@@ -2622,9 +2781,23 @@ h4 {
   }
 }
 
+@media (min-width: 1320px) {
+  .problems__h2 {
+    white-space: nowrap;
+  }
+}
+
 @media (max-width: 1023px) {
   .tariffs__body {
     flex-direction: column;
+  }
+
+  .platformCard {
+    flex-direction: column;
+  }
+
+  .platformCard__item {
+    max-width: 100%;
   }
 }
 
@@ -2650,13 +2823,7 @@ h4 {
   }
 
   .h2 {
-    font-family: var(--third-family);
-    font-weight: 300;
     font-size: 48px;
-    line-height: 110%;
-    text-transform: uppercase;
-    text-align: center;
-    color: #fcfcfc;
   }
 
   .btn {
@@ -2705,6 +2872,11 @@ h4 {
 
   .plan__body .accordion__h4.acc-active::before {
     display: none;
+  }
+
+  .plan__body .accordion__item .accordion__h4.acc-active::after {
+    width: 100%;
+    max-width: 60%;
   }
 
   .plan__body .acc-active + .accordion__txt {
@@ -2826,6 +2998,15 @@ h4 {
     margin-top: 40px;
   }
 
+  .based__title {
+    display: none;
+  }
+
+  .based__titleMob {
+    display: block;
+    max-width: 500px;
+  }
+
   .based__subtitle {
     font-size: 16px;
     margin-top: 20px;
@@ -2924,12 +3105,12 @@ h4 {
     flex-direction: column;
   }
 
-  .planContentCard__h6 {
-    margin-top: 14px;
-  }
-
   .planContentCard__li {
     font-size: 14px;
+  }
+
+  .planContentCard__ul:not(:last-child) {
+    margin-bottom: 15px;
   }
 
   .sectionResult {
@@ -2947,8 +3128,9 @@ h4 {
   .resultCard {
     flex-direction: column;
     padding-top: 0;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    gap: 20px;
   }
 
   .resultCard__item:first-child {
@@ -2988,8 +3170,20 @@ h4 {
   }
 
   .resultCard__imgWrapper {
-    flex-direction: column;
-    gap: 16px;
+    gap: 8px;
+    font-size: 10px;
+    text-align: center;
+  }
+
+  .resultCard__imgCard {
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-top: 4px;
+    padding-bottom: 10px;
+  }
+
+  .resultCard__img {
+    border-width: 4px;
   }
 
   .resultCard__review {
@@ -3001,12 +3195,47 @@ h4 {
     padding: 75px 0;
   }
 
+  .tariffs__title {
+    display: none;
+  }
+
+  .tariffs__titleMob {
+    display: block;
+    max-width: 500px;
+  }
+
   .tariffs__bottom {
     margin-top: 20px;
   }
 
   .tariffs__btn {
     font-size: 16px;
+  }
+
+  .sectionProblems {
+    padding: 65px 0;
+    background-image: url("../img/bgProblems_mob.webp");
+  }
+
+  .problems__subtitle {
+    font-size: 60px;
+  }
+
+  .problems__p {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 130%;
+    text-align: center;
+    color: #fff5ff;
+  }
+
+  .sectionPlatform {
+    padding: 75px 0;
+  }
+
+  .platform__body {
+    margin-top: 40px;
   }
 
   .sectionReviews {

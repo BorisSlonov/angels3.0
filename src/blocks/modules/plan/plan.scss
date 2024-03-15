@@ -1,6 +1,7 @@
 .sectionPlan {
     padding: 150px 0;
     background-image: url('../img/bgPlan.webp');
+    background-size: cover;
 
     @media(max-width:767px) {
         padding: 75px 0;
@@ -156,6 +157,8 @@
     &__header {
         display: flex;
         align-items: center;
+        margin-bottom: 5px;
+
         @media(max-width:767px) {
             flex-direction: column;
         }
@@ -171,15 +174,11 @@
     }
 
     &__h6 {
-        margin-top: 20px;
         font-weight: 500;
         font-size: 18px;
         line-height: 130%;
         color: #4b594a;
 
-        @media(max-width:767px) {
-            margin-top: 14px;
-        }
     }
 
     &__ul {
@@ -221,7 +220,7 @@
 
     .planItem__li_video {
         &::before {
-            background-image: url('../img/iconFile_fff.svg');
+            background-image: url('../img/iconVideo_fff.svg');
         }
     }
 }
@@ -232,5 +231,15 @@
     .accordion__num {
         background: linear-gradient(126deg, #edeae4 0%, #efebe0 49.26%, #c0bcb3 100%);
         color: #353535;
+    }
+}
+
+
+
+.planContentCard__ul:not(:last-child) {
+    margin-bottom: 20px;
+
+    @media(max-width:767px) {
+        margin-bottom: 15px;
     }
 }

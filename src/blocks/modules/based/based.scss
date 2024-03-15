@@ -19,6 +19,23 @@
         }
     }
 
+    &__title {
+        max-width: 1150px;
+
+        @media(max-width:767px) {
+            display: none;
+        }
+    }
+
+    &__titleMob {
+        display: none;
+
+        @media(max-width:767px) {
+            display: block;
+            max-width: 500px;
+        }
+    }
+
     &__subtitle {
         margin-top: 30px;
         text-align: center;
