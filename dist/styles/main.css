@@ -2069,13 +2069,17 @@ h4 {
   right: 0;
   bottom: 0;
   left: 0;
-  background-image: url(../img/forYouCard.webp);
-  opacity: 0.2;
+  background-image: url(../img/resultCard.webp);
   background-size: cover;
   border-radius: 10px;
   backdrop-filter: blur(25px);
   z-index: 2;
   display: none;
+}
+
+.resultCard__h3 span {
+  position: relative;
+  z-index: 2;
 }
 
 .resultCard__h4 {
@@ -2420,6 +2424,7 @@ h4 {
   font-family: var(--third-family);
   font-size: 40px;
   line-height: 1;
+  font-variant-numeric: lining-nums;
 }
 
 .tariffs__price:not(:first-child) {
@@ -3123,7 +3128,7 @@ h4 {
   .sectionPage1 {
     padding-top: 50px;
     background-image: url("../img/loader_mob.webp");
-    padding-bottom: 500px;
+    padding-bottom: 750px;
   }
 
   .page1 {

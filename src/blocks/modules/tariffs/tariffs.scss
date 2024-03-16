@@ -263,6 +263,7 @@
     font-family: var(--third-family);
     font-size: 40px;
     line-height: 1;
+    font-variant-numeric: lining-nums;
     @media(max-width:767px) {
         font-size: 34px;
     }

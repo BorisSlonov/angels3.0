@@ -87,6 +87,7 @@ __webpack_require__.r(__webpack_exports__);
 var swiperPlatform = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"]('.swiperPlatform', {
   autoHeight: true,
   slidesPerView: 1,
+  spaceBetween: 20,
   // Navigation arrows
   navigation: {
     nextEl: '.platformNavWrapper .swiper-button-next',
