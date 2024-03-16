@@ -236,6 +236,7 @@
     letter-spacing: 0.14em;
     text-transform: uppercase;
     color: #e9e5dc;
+    white-space: nowrap;
 
     @media(max-width:767px) {
         font-size: 16px;
@@ -262,6 +263,9 @@
     font-family: var(--third-family);
     font-size: 40px;
     line-height: 1;
+    @media(max-width:767px) {
+        font-size: 34px;
+    }
 }
 
 .tariffs__price:not(:first-child) {

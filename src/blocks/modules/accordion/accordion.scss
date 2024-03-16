@@ -335,6 +335,7 @@
 
         @media(max-width:767px) {
             font-size: 18px;
+            margin-bottom: 15px;
         }
     }
 
@@ -352,7 +353,7 @@
 
         @media(max-width:767px) {
             margin-left: 0;
-            margin-top: 12px;
+            margin-top: 0;
             padding-right: 12px;
             font-size: 20px;
         }
@@ -393,6 +394,7 @@
             @media(max-width:767px) {
                 width: 40%;
                 font-size: 20px;
+                margin-bottom: 0;
             }
         }
 

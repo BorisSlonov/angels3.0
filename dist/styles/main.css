@@ -2001,6 +2001,10 @@ h4 {
   margin-right: auto;
 }
 
+.result__titleMob {
+  display: none;
+}
+
 .result__body {
   margin-top: 60px;
   position: relative;
@@ -2393,6 +2397,7 @@ h4 {
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: #e9e5dc;
+  white-space: nowrap;
 }
 
 .tariffs__btn:hover {
@@ -3072,11 +3077,12 @@ h4 {
 
   .plan__body .accordion__num {
     font-size: 18px;
+    margin-bottom: 15px;
   }
 
   .plan__body .accordion__name {
     margin-left: 0;
-    margin-top: 12px;
+    margin-top: 0;
     padding-right: 12px;
     font-size: 20px;
   }
@@ -3091,6 +3097,7 @@ h4 {
   .plan__body .acc-active .accordion__num {
     width: 40%;
     font-size: 20px;
+    margin-bottom: 0;
   }
 
   .plan__body .acc-active .accordion__openner {
@@ -3115,7 +3122,7 @@ h4 {
 
   .sectionPage1 {
     padding-top: 50px;
-    background-image: url("../img/bg1_mob.webp");
+    background-image: url("../img/loader_mob.webp");
     padding-bottom: 500px;
   }
 
@@ -3279,6 +3286,7 @@ h4 {
 
   .planContent__h5 {
     font-size: 22px;
+    margin-bottom: 12px;
   }
 
   .planContent__li {
@@ -3289,8 +3297,8 @@ h4 {
     display: none;
   }
 
-  .planContentCard__header {
-    flex-direction: column;
+  .planContentCard__forWho {
+    font-size: 18px;
   }
 
   .planContentCard__li {
@@ -3303,6 +3311,17 @@ h4 {
 
   .sectionResult {
     padding: 75px 0;
+  }
+
+  .result__title {
+    display: none;
+  }
+
+  .result__titleMob {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 500px;
   }
 
   .result__body {
@@ -3334,7 +3353,7 @@ h4 {
     transform: translateX(-20px);
     padding: 24px 8px;
     border-radius: 10px;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 120%;
     text-align: center;
     color: #fff;
@@ -3377,6 +3396,7 @@ h4 {
   .resultCard__review {
     padding: 12px;
     font-size: 14px;
+    text-align: left;
   }
 
   .sectionTariffs {
@@ -3399,6 +3419,10 @@ h4 {
 
   .tariffs__btn {
     font-size: 16px;
+  }
+
+  .tariffs__price {
+    font-size: 34px;
   }
 
   .sectionProblems {
@@ -3554,6 +3578,10 @@ h4 {
   .based__titleMob {
     display: block;
     max-width: 260px;
+  }
+
+  .result__titleMob {
+    max-width: 280px;
   }
 
   .tariffs__titleMob {
